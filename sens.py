@@ -1,6 +1,5 @@
 import numpy as np
 import numdifftools as nd  # type: ignore
-from inspect import signature
 
 from typing import Callable, List
 
