@@ -79,7 +79,7 @@ plt.show()
 
 This gives us the following plot:
 
-![]([https://github.com/Ma-Fi-94/sens/blob/main/Figure1.svg)
+![](https://github.com/Ma-Fi-94/sens/blob/main/Figure1.svg)
 
 ## Dependencies
 - numpy
