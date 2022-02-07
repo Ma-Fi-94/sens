@@ -18,6 +18,18 @@ def sensitivities(func: Callable,
     return grad
 
 
+def sensitivities2(func: Callable,
+                  inputs: List[float],
+                  relative: bool = False) -> np.ndarray:
+
+    hessian = 0 # TBD!
+
+    if relative:
+        pass # TBD!
+
+    return hessian
+
+  
 def sensitivities_distributions(func: Callable,
                                 input_distribs: List[Callable],
                                 N: int = 100,
@@ -30,3 +42,11 @@ def sensitivities_distributions(func: Callable,
         results.append(sens)
 
     return np.array(results).T
+
+  
+def sensitivities2_distributions(func: Callable,
+                                input_distribs: List[Callable],
+                                N: int = 100,
+                                relative: bool = False) -> np.ndarray:
+
+  pass # TBD!
