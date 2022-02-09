@@ -28,7 +28,8 @@ def sensitivities2(func: Callable,
     if relative:
         y0 = func(inputs)
         xixj = np.array([[xi*xj for xi in inputs] for xj in inputs])
-        hessian *= xixj / y0**2
+        # TODO: Check the literature on this
+        hessian *= xixj / y0
 
     return hessian
 
