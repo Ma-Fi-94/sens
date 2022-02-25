@@ -17,22 +17,6 @@ def sensitivities(func: Callable,
 
     return grad
 
-
-def sensitivities2(func: Callable,
-                  inputs: List[float],
-                  relative: bool = False) -> np.ndarray:
-    '''Calculate second-order absolute or relative sensitivities at specific point in parameter space.'''
-    
-    hessian = np.array(nd.Hessian(func)(inputs))
-
-    if relative:
-        y0 = func(inputs)
-        xixj = np.array([[xi*xj for xi in inputs] for xj in inputs])
-        # TODO: Check the literature on this
-        hessian *= xixj / y0
-
-    return hessian
-
   
 def sensitivities_distributions(func: Callable,
                                 input_distribs: List[Callable],
@@ -48,11 +32,4 @@ def sensitivities_distributions(func: Callable,
         results.append(sens)
 
     return np.array(results).T
-
   
-def sensitivities2_distributions(func: Callable,
-                                input_distribs: List[Callable],
-                                N: int = 100,
-                                relative: bool = False) -> np.ndarray:
-
-    pass # TBD!
